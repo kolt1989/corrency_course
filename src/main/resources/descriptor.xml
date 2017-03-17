@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>build</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>target/deps</directory>
+            <outputDirectory>/lib/</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+    <files>
+        <file>
+            <source>target/${project.artifactId}-${project.version}.jar</source>
+            <outputDirectory>/</outputDirectory>
+            <destName>${project.artifactId}.jar</destName>
+        </file>
+        <file>
+            <source>system.properties</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+        <file>
+            <source>log4j.xml</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+    </files>
+</assembly>
